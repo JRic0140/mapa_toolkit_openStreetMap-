@@ -1,14 +1,18 @@
 'use client';
 
-import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
-
+import {map} from 'leaflet' ;
+import { useEffect, useRef } from "react";
+import acrylic_toolbox from "./css/Toolkit_box.module.css";
 export default function Home() {
-  const mapRef = useRef<any>(null);
+  const mapRef = useRef<ReturnType<typeof map> | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-
+  const tool_kit_map_buttons = [
+    { icon: "add_location_alt", action: () => { console.log("Add Location clicked"); } },
+    { icon: "route", action: () => { console.log("Route clicked"); } },
+    { icon: "delete", action: () => { console.log("Delete clicked"); } },
+  ]
   useEffect(() => {
-    let mapInstance: any;
+    let mapInstance: ReturnType<typeof map> | undefined;
     let cssLink: HTMLLinkElement | null = null;
 
     // solo en cliente, carga leaflet dinámicamente
@@ -51,33 +55,24 @@ export default function Home() {
 
     <div className="flex w-screen min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w flex-col items-center justify-between py-5 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center sm:items-start">
-          <h1 className="mb-6 text-4xl font-bold text-green-900 dark:text-green-100 sm:text-4xl">
-            Welcome to OpenStreetMap + Next.js!
-          </h1>
-
-          <div ref={containerRef} id="map" style={{ height: '500px', width: '800px' }} />
+        <div className="flex flex-col items-center sm:items-start w-full">
+          <div className={`${acrylic_toolbox.map_container} map_container`}>
+            <div className={`${acrylic_toolbox.map_header}`}>
+              <h2 className={` ml-2 text-2xl font-bold text-green-900 dark:text-green-100 sm:text-2xl`}>
+                Welcome to RicOpenStreetMap + Next.js!
+              </h2>
+            </div>
+            <div ref={containerRef} id="map" className={`${acrylic_toolbox.map}`}/>
+            <div className={`${acrylic_toolbox.acrylic_toolbox} acrylic-toolbox`}>
+              {tool_kit_map_buttons.map((button, index) => 
+                (<button className={`${acrylic_toolbox.icon_button}`} key={index} onClick={button.action} >
+                  <span className="material-symbols-outlined ">{button.icon}</span>
+                </button>))}
+            </div>
+          </div>
         </div>
       </main>
     </div>
-
-
-    // <div className="flex w-screen min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-    //   <main className="flex min-h-screen w-full max-w flex-col items-center justify-between py-5 px-16 bg-white dark:bg-black sm:items-start">
-    //     <div className="flex flex-col items-center sm:items-start">
-    //       <h1 className="mb-6 text-4xl font-bold text-green-900 dark:text-green-100 sm:text-4xl">
-    //         Welcome to OpenStreetMap + Next.js!
-    //       </h1>
-
-    //       <div
-    //         ref={containerRef}
-    //         className="h-[500px] w-[800px] border-4 border-green-900 dark:border-green-100"
-    //       >
-    //         {/* Mapa se renderiza aquí */}
-    //       </div>
-    //     </div>
-    //   </main>
-    // </div>
 
   );
 

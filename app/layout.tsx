@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -26,7 +27,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
 
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add_location_alt,delete,route&display=optional" />
+        
 
       </head>
       <body
@@ -34,7 +36,7 @@ export default function RootLayout({
       >
         {children}
 
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script async src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
       </body>
     </html>
   );
