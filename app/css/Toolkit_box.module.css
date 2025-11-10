@@ -65,4 +65,9 @@
   width: calc(100% - 150px);
 }
 
+.active {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: #000 !important;
+}
+
 /*# sourceMappingURL=Toolkit_box.module.css.map */

@@ -79,3 +79,7 @@ $border_radius: 10px;
 .map{
     @extend %map_size;
 }
+.active{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #000 !important;
+}
