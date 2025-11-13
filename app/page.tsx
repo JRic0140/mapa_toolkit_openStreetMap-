@@ -1,17 +1,18 @@
 'use client';
 import {map} from 'leaflet' ;
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import acrylic_toolbox from "./css/Toolkit_box.module.css";
 import MarkerTools from "./utils/marker_tools";
 import Image from 'next/image';
+import HeaderComponent from './components/HeaderComponent';
 export default function Home() {
   const mapRef = useRef<ReturnType<typeof map> | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const tool_kit_map_buttons = [
+  const tool_kit_map_buttons = useMemo(() => [
     { icon: "add_location_alt"},
     { icon: "route"},
     { icon: "delete"},
-  ]
+  ], []);
 
   useEffect(() => {
     let mapInstance: ReturnType<typeof map> | undefined;
@@ -38,7 +39,7 @@ export default function Home() {
         mapRef.current = mapInstance;
 
         // Inicializar MarkerTools
-        const markerTools = new MarkerTools(mapInstance, tool_kit_map_buttons);
+         new MarkerTools(mapInstance, tool_kit_map_buttons);
       }
     })();
     return () => {
@@ -48,7 +49,7 @@ export default function Home() {
       }
       if (cssLink && cssLink.parentNode) cssLink.parentNode.removeChild(cssLink);
     };
-  }, []);
+  }, [tool_kit_map_buttons]);
 
   return (
 
@@ -56,11 +57,8 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w flex-col items-center justify-between py-5 px-16 bg-white dark:bg-black sm:items-start">
         <div className="flex flex-col items-center sm:items-start w-full">
           <div className={`${acrylic_toolbox.map_container} map_container`}>
-            <div className={`${acrylic_toolbox.map_header}`}>
-              <h2 className={` ml-2 text-2xl font-bold text-green-900 dark:text-green-100 sm:text-2xl`}>
-                Bienvenido a RicOpenStreetMap + Next.js! 
-              </h2>
-            </div>
+            
+            <HeaderComponent/>
             <div ref={containerRef} id="map" className={`${acrylic_toolbox.map}`}/>
             <div className={`${acrylic_toolbox.acrylic_toolbox} acrylic-toolbox`}>
               {tool_kit_map_buttons.map((button, index) => 

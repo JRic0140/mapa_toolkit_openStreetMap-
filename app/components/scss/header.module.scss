@@ -1,0 +1,111 @@
+%acrylic_background{
+    background-color: rgba(255, 255, 255, 0.6); /* Acrílico blanco con transparencia */
+    box-shadow: 0 0 13px  rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.map_header{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 1000;
+        min-height: 60px;
+        margin-left: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 130px);
+        @extend %acrylic_background;
+
+
+
+        /* Sección izquierda */
+        .leftsection {
+          display: flex;
+          align-items: center;
+          // gap: 32px;
+          margin: 0 15px ;
+          
+          .logo {
+            height:40px;
+            border-radius: 50%;
+          }
+        }
+
+
+
+        /* Sección central */
+        .middlesection {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+
+
+
+          
+          .button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            color: black;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+
+
+        }
+
+
+
+
+      .rightsection {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+      /* Sección derecha */
+
+
+      .profilebutton {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .profileicon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .dropdownicon {
+        font-size: 16px;
+      }
+
+
+      /* Para que el texto del usuario no se vea muy pequeño */
+      .username {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      }
+
+    }
+
+
+
+

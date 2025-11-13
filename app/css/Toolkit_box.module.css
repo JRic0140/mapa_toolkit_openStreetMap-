@@ -14,14 +14,13 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 80px; /* Ancho de la caja de herramientas */
-  height: 100%;
+  width: 60px; /* Ancho de la caja de herramientas */
+  height: calc(100% - 20px);
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1000;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 .acrylic_toolbox .icon_button {
   background: none;
@@ -62,7 +61,7 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  width: calc(100% - 150px);
+  width: calc(100% - 130px);
 }
 
 .active {

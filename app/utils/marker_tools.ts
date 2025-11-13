@@ -7,7 +7,7 @@ export default  class MarkerTools {
     map: L.Map;
     tool_kit_map_buttons: Array<{icon:string}>;
     prev_coords: L.LatLng | null = null;
-    constructor(map: L.Map,tool_kit_map_buttons:Array<{icon:string}> , options?: unknown) {
+    constructor(map: L.Map,tool_kit_map_buttons:Array<{icon:string}> ) {
         this.map = map;
         this.tool_kit_map_buttons = tool_kit_map_buttons;
         this.tool_click_events(this.map, this.tool_kit_map_buttons);
@@ -20,7 +20,7 @@ export default  class MarkerTools {
         return marker;
     }
 
-    trazarRuta(puntos: L.LatLngExpression[], options?: L.PolylineOptions): L.Polyline {
+    trazarRuta(puntos: L.LatLngExpression[], options?: L.PolylineOptions) {
 
         console.log(`ruta en coords  a previas ${this.prev_coords}`);
         // Lógica para trazar una ruta en el mapa

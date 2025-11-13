@@ -1,0 +1,114 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sección izquierda */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Sección central */
+.middle-section {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.save-button {
+  background-color: #1d1d1d;
+}
+
+.export-button {
+  background-color: #1d1d1d;
+}
+
+.language-button {
+  background-color: #1d1d1d;
+}
+
+/* Sección derecha */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-icon {
+  font-size: 16px;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.app-header .button:hover {
+  background-color: #2d2d2d;
+}
+
+.profile-button:hover {
+  background-color: #2d2d2d;
+}
+
+/* Para que el texto del usuario no se vea muy pequeño */
+.username {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

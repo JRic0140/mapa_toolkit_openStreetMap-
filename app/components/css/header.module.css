@@ -1,0 +1,87 @@
+@charset "UTF-8";
+.map_header {
+  background-color: rgba(255, 255, 255, 0.6); /* Acrílico blanco con transparencia */
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.map_header {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 1000;
+  min-height: 60px;
+  margin-left: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 130px);
+  /* Sección izquierda */
+}
+.map_header .leftsection {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+.map_header .leftsection .logo {
+  height: 40px;
+  border-radius: 50%;
+}
+.map_header {
+  /* Sección central */
+}
+.map_header .middlesection {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.map_header .middlesection .button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.map_header .rightsection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* Sección derecha */
+}
+.map_header .rightsection .profilebutton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.map_header .rightsection .profileicon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.map_header .rightsection .dropdownicon {
+  font-size: 16px;
+}
+.map_header .rightsection {
+  /* Para que el texto del usuario no se vea muy pequeño */
+}
+.map_header .rightsection .username {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*# sourceMappingURL=header.module.css.map */
