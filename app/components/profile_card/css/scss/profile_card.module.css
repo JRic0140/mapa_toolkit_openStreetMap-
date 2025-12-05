@@ -1,0 +1,56 @@
+/*
+Error: File to import not found or unreadable: /.
+       Load path: /home/JRi014/coding/open_street_project/app/components/profile_card/css
+        on line 1 of ./app/components/profile_card/css/scss/profile_card.module.scss
+
+1: @import "/";
+2: .profile_card{
+3:     position:fixed;
+4:     
+5: }
+
+Backtrace:
+./app/components/profile_card/css/scss/profile_card.module.scss:1
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in 'Sass::Tree::ImportNode#import'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in 'Sass::Tree::ImportNode#imported_file'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in 'Sass::Tree::ImportNode#css_import?'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in 'Sass::Tree::Visitors::Perform#visit_import'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in 'Sass::Tree::Visitors::Base#visit'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in 'block in Sass::Tree::Visitors::Perform#visit'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/stack.rb:79:in 'block in Sass::Stack#with_base'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/stack.rb:135:in 'Sass::Stack#with_frame'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/stack.rb:79:in 'Sass::Stack#with_base'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in 'Sass::Tree::Visitors::Perform#visit'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in 'block in Sass::Tree::Visitors::Base#visit_children'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in 'Array#map'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in 'Sass::Tree::Visitors::Base#visit_children'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in 'block in Sass::Tree::Visitors::Perform#visit_children'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in 'Sass::Tree::Visitors::Perform#with_environment'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in 'Sass::Tree::Visitors::Perform#visit_children'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in 'block in Sass::Tree::Visitors::Base#visit'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in 'Sass::Tree::Visitors::Perform#visit_root'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in 'Sass::Tree::Visitors::Base#visit'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in 'Sass::Tree::Visitors::Perform#visit'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in 'Sass::Tree::Visitors::Perform.visit'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in 'Sass::Tree::RootNode#css_tree'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in 'Sass::Tree::RootNode#render_with_sourcemap'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/engine.rb:389:in 'Sass::Engine#_render_with_sourcemap'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/engine.rb:307:in 'Sass::Engine#render_with_sourcemap'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in 'Sass::Plugin::Compiler#update_stylesheet'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in 'block in Sass::Plugin::Compiler#update_stylesheets'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in 'Array#each'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in 'Sass::Plugin::Compiler#update_stylesheets'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in 'Sass::Plugin::Compiler#watch'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/plugin.rb:109:in 'Sass::Plugin#method_missing'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in 'Sass::Exec::SassScss#watch_or_update'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in 'Sass::Exec::SassScss#process_result'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in 'Sass::Exec::Base#parse'
+/usr/share/gems/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in 'Sass::Exec::Base#parse!'
+/usr/share/gems/gems/sass-3.7.4/bin/sass:13:in '<top (required)>'
+/usr/bin/sass:25:in 'Kernel#load'
+/usr/bin/sass:25:in '<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: /.\A        Load path: /home/JRi014/coding/open_street_project/app/components/profile_card/css\A         on line 1 of ./app/components/profile_card/css/scss/profile_card.module.scss\A \A 1: @import \"/\";\A 2: .profile_card{\A 3:     position:fixed;\A 4:     \A 5: }"; }

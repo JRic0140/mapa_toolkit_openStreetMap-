@@ -1,4 +1,5 @@
 import acrylic_toolbox from "../css/Toolkit_box.module.css";
+// import * as L from 'leaflet';
 
 export default  class MarkerTools {
 
@@ -12,7 +13,7 @@ export default  class MarkerTools {
         this.tool_kit_map_buttons = tool_kit_map_buttons;
         this.tool_click_events(this.map, this.tool_kit_map_buttons);
     }
-
+    // 
     addMarker(latlng: L.LatLngExpression, options?: L.MarkerOptions): L.Marker {
         // Lógica para añadir un marcador al mapa
         const marker = L.marker(latlng, options).addTo(this.map);
@@ -30,6 +31,7 @@ export default  class MarkerTools {
 
 
     }
+    
     clearDrawList() {
         this.draw_list.forEach((item) => {
             this.map.removeLayer(item);

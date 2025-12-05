@@ -1,0 +1,5 @@
+@import "../../../../css/scss/general_styles_and_themes.scss";
+.profile_card{
+    position:fixed;
+    @extend .acrylic_background
+}

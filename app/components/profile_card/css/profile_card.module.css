@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.acrylic_background, .profile_card {
+  background-color: rgba(255, 255, 255, 0.6);
+  /* Acrílico blanco con transparencia */
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px); }
+
+/* .profile_card {
+  position: abs; } */
+
+/*# sourceMappingURL=profile_card.module.css.map */

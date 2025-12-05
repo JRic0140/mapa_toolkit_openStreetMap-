@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 import HeaderStyles from './css/header.module.css'
+import ProfileCard from './profile_card/ProfileCard';
 export default function HeaderComponent() {
     
   return (
@@ -27,7 +28,7 @@ export default function HeaderComponent() {
       </div>
 
       {/* Usuario */}
-      <div className={`${HeaderStyles.rightsection}`}>
+      <div className={`relative ${HeaderStyles.rightsection}`}>
         <button className={`${HeaderStyles.profilebutton}`}>
           <span className={`${HeaderStyles.username}`}>Invitado</span>
           <img
@@ -36,6 +37,7 @@ export default function HeaderComponent() {
             className={`${HeaderStyles.profileicon}`}
           />
           <span className={`${HeaderStyles.dropdownicon}`}>▼</span>
+          <ProfileCard/>
         </button>
       </div>
     </header>

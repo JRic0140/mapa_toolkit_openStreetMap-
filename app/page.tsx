@@ -5,6 +5,8 @@ import acrylic_toolbox from "./css/Toolkit_box.module.css";
 import MarkerTools from "./utils/marker_tools";
 import Image from 'next/image';
 import HeaderComponent from './components/HeaderComponent';
+import ProfileCard from './components/profile_card/ProfileCard';
+import LoginCard from './login_card/LoginCard';
 export default function Home() {
   const mapRef = useRef<ReturnType<typeof map> | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -55,9 +57,10 @@ export default function Home() {
 
     <div className="flex w-screen min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w flex-col items-center justify-between py-5 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center sm:items-start w-full">
+        <div className="flex flex-col items-center sm:items-start w-full relative">
+          <LoginCard/>
+
           <div className={`${acrylic_toolbox.map_container} map_container`}>
-            
             <HeaderComponent/>
             <div ref={containerRef} id="map" className={`${acrylic_toolbox.map}`}/>
             <div className={`${acrylic_toolbox.acrylic_toolbox} acrylic-toolbox`}>
@@ -69,7 +72,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
       </main>
+
     </div>
   );
 }

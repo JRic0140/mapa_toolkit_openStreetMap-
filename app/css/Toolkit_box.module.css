@@ -1,72 +1,54 @@
 @charset "UTF-8";
-.map, .map_container {
-  width: 100%;
-  height: 80vh;
-}
-
-.map_container .map_header, .acrylic_toolbox {
-  background-color: rgba(255, 255, 255, 0.6); /* Acrílico blanco con transparencia */
+.acrylic_background, .acrylic_toolbox {
+  background-color: rgba(255, 255, 255, 0.6);
+  /* Acrílico blanco con transparencia */
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(4px);
-}
+  backdrop-filter: blur(4px); }
+
+.map_container, .map {
+  width: 100%;
+  height: 80vh; }
 
 .acrylic_toolbox {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px; /* Ancho de la caja de herramientas */
+  width: 60px;
+  /* Ancho de la caja de herramientas */
   height: calc(100% - 20px);
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1000;
-}
-.acrylic_toolbox .icon_button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 32px;
-  color: #333;
-  padding: 10px;
-  border-radius: 30px;
-  transition: background-color 0.3s, color 0.3s;
-  margin-top: 5px;
-}
-.acrylic_toolbox .icon_button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #000;
-}
-.acrylic_toolbox .icon_button::after {
-  content: "";
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
-}
+  z-index: 1000; }
+  .acrylic_toolbox .icon_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    color: #333;
+    padding: 10px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 5px; }
+    .acrylic_toolbox .icon_button:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #000; }
+    .acrylic_toolbox .icon_button::after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s; }
 
 .map_container {
   position: relative;
-  overflow: hidden;
-}
-.map_container .map_header {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  z-index: 1000;
-  min-height: 60px;
-  margin-left: 55px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  width: calc(100% - 130px);
-}
+  overflow: hidden; }
 
 .active {
   background-color: rgba(0, 0, 0, 0.1) !important;
-  color: #000 !important;
-}
+  color: #000 !important; }
 
 /*# sourceMappingURL=Toolkit_box.module.css.map */

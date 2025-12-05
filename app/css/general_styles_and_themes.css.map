@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,mBAAmB;EACf,gBAAgB,EAAE,wBAAwB;EAAE,uCAAuC;EACnF,UAAU,EAAE,2BAA4B;EACxC,eAAe,EAAE,SAAS",
+"sources": ["scss/general_styles_and_themes.scss"],
+"names": [],
+"file": "general_styles_and_themes.css"
+}
